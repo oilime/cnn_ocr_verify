@@ -77,11 +77,6 @@ def get_grey_img():
 @time_cal
 def get_sample_img():
     length = len(os.listdir(grey_path))
-    index = 0
-    # with Image.open(''.join([grey_path, '1.png'])) as sam:
-    #     width, height = sam.size
-    #     ocr_data = np.empty((length, width*height))
-    #     ocr_label = np.empty(length)
     ocr_data = []
     ocr_label = []
     with open(''.join([data_path, 'data.txt']), 'r') as f:

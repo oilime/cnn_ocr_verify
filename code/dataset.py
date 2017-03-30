@@ -59,14 +59,11 @@ class DataSet(object):
         start = self._index_in_epoch
         self._index_in_epoch += batch_size
         if self._index_in_epoch > self._num_examples:
-            # Finished epoch
             self._epochs_completed += 1
-            # Shuffle the data
             perm = np.arange(self._num_examples)
             np.random.shuffle(perm)
             self._images = self._images[perm]
             self._labels = self._labels[perm]
-            # Start next epoch
             start = 0
             self._index_in_epoch = batch_size
             assert batch_size <= self._num_examples

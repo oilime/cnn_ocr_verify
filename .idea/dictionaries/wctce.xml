@@ -1,7 +1,10 @@
 <component name="ProjectDictionaryState">
   <dictionary name="wctce">
     <words>
+      <w>adadelta</w>
+      <w>crossentropy</w>
       <w>ndarray</w>
+      <w>softmax</w>
       <w>timepage</w>
     </words>
   </dictionary>
