@@ -26,7 +26,7 @@ def main():
         data = dataset.read_data_sets('d:\\python code\\snh\\data\\ocr_test.pkl')
         x = tf.placeholder(tf.float32, shape=[None, 1800])
         y_ = tf.placeholder(tf.float32, shape=[None, 40])
-        x_image = tf.reshape(x, [-1, 60, 30, 1])
+        x_image = tf.reshape(x, [-1, 30, 60, 1])
 
         # 卷积层1
         w_conv1 = weight_variable([5, 5, 1, 32])

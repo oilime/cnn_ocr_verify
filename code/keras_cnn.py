@@ -1,11 +1,11 @@
 # -*- coding:utf-8 -*-
 import pickle
+import os
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Convolution2D, MaxPooling2D
 from keras.utils.vis_utils import plot_model
-import os
 
 nb_filters = 32
 nb_filters_1 = 64
@@ -70,5 +70,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-

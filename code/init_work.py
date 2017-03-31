@@ -112,12 +112,12 @@ def get_sample_img():
     print('******get image data done******')
     with open(''.join([data_path, 'ocr_test.pkl']), 'wb') as outfile:
         pickle.dump([[ocr_data[0:int(length*0.9)], ocr_label[0:int(length*0.9)]],
-                     [ocr_data[int(length*0.9)+1:int(length*0.95)], ocr_label[int(length*0.9)+1:int(length*0.95)]],
-                     [ocr_data[int(length*0.95):length], ocr_label[int(length*0.95):length]]],
+                     [ocr_data[int(length*0.9)+1:int(length*0.95)+1], ocr_label[int(length*0.9)+1:int(length*0.95)+1]],
+                     [ocr_data[int(length*0.95)+2:length], ocr_label[int(length*0.95)+2:length]]],
                     outfile)
 
 
 if __name__ == '__main__':
-    # get_src_img(40000)
+    get_src_img(100000)
     # get_grey_img()
-    get_sample_img()
+    # get_sample_img()
